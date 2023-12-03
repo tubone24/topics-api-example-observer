@@ -18,3 +18,14 @@ model users {
   image     String
   createdAt DateTime @default(now())
 }
+
+model topics {
+  id        Int      @id @default(autoincrement())
+  name      String
+  configVersion String
+  modelVersion String
+  taxonomyVersion String
+  topic String
+  version String
+  createdAt DateTime @default(now())
+}
