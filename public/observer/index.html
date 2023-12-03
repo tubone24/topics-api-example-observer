@@ -6,6 +6,9 @@
                 console.log('document.browsingTopics() is supported');
                 const topics = await document.browsingTopics();
                 console.log('Topics:', topics);
+                if (topics.length === 0) {
+                    return;
+                }
                 fetch("/api/send-topics", {
                     method: "POST",
                     headers: {
