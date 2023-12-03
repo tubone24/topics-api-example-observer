@@ -24,6 +24,7 @@ export async function POST(request: Request) {
         console.log(result);
         return Response.json(data);
     }
+    return Response.json({ message: "Bad Request" });
 }
 
 export async function GET(request: Request) {
